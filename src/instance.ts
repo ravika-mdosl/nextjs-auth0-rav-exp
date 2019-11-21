@@ -12,6 +12,11 @@ export interface ISignInWithAuth0 {
   handleLogin: (req: IncomingMessage, res: ServerResponse) => Promise<void>;
 
   /**
+   * Silent login handler which will create a local session if the user is already authenticated with Auth0.
+   */
+  handleSilentLogin: (req: IncomingMessage, res: ServerResponse) => Promise<void>;
+
+  /**
    * Callback handler which will complete the transaction and create a local session.
    */
   handleCallback: (req: IncomingMessage, res: ServerResponse, options: CallbackOptions) => Promise<void>;

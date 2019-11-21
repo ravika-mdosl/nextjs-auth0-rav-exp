@@ -7,6 +7,9 @@ export default function createDummyBrowserInstance(): ISignInWithAuth0 & { isBro
     handleLogin: (): Promise<void> => {
       throw new Error('The handleLogin method can only be used from the server side');
     },
+    handleSilentLogin: (): Promise<void> => {
+      throw new Error('The handleSilentLogin method can only be used from the server side');
+    },
     handleLogout: (): Promise<void> => {
       throw new Error('The handleLogout method can only be used from the server side');
     },
